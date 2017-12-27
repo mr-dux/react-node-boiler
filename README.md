@@ -13,7 +13,7 @@ Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 Build app to "build/app" directory.
 
-### `npm build-app-prod`
+### `npm build-server-prod`
 
 Build files from the folder "server" in a single file "server.js" in the folder "build".
 
