@@ -1,0 +1,43 @@
+.app-div {
+    padding-top: 50px;
+}
+
+.app-inner-div {
+    text-align: center;
+    margin: 0 auto;
+    width: 350px;
+    height: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.app-inner-inner-div {
+    width: 500px;
+    padding-top: 20px;
+}
+
+.app-link {
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #7fc678;
+}
+
+.app-link:hover {
+    color: #207921;
+    cursor: pointer;
+}
+
+.todos {
+    padding: 10px;
+}
+
+.todos {
+    padding: 10px;
+}
+
+.add-todo-field {
+    height: 40px;
+    display: inline-flex;
+}

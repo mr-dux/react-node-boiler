@@ -1,4 +1,4 @@
-# react-boiler
+# react-node-boiler
 
 ## Scripts
 ######
