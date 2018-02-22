@@ -2,6 +2,7 @@
 
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
+//process.env.AUTHORIZED = true;
 
 process.on('unhandledRejection', err => {
     throw err;

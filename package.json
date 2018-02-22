@@ -1,12 +1,23 @@
 {
   "name": "react-node-boiler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React and Node.js Express boilerplate",
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.2",
+    "history": "^4.7.2",
+    "http-proxy-middleware": "^0.17.4",
+    "material-ui": "^0.19.4",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-tap-event-plugin": "^3.0.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "node dev_tools/scripts/start.js",

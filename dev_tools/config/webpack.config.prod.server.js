@@ -35,18 +35,9 @@ module.exports = {
         strictExportPresence: true,
     },
     plugins: [
-        new webpack.DefinePlugin(env.stringified),
-        /*new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-                comparisons: false,
-            },
-            output: {
-                comments: false,
-                ascii_only: true,
-            },
-            sourceMap: shouldUseSourceMap,
-        }),*/
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify("production")
+        }),
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     ]
 };

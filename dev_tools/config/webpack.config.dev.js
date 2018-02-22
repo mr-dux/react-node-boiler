@@ -13,14 +13,12 @@ const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
 const publicPath = '/';
-const publicUrl = '';
+const publicUrl = '/';
 const env = getClientEnvironment(publicUrl);
-
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: [
         require.resolve('./polyfills'),
-        require.resolve('react-dev-utils/webpackHotDevClient'),
         paths.appIndexJs,
     ],
     output: {
@@ -29,15 +27,20 @@ module.exports = {
         chunkFilename: 'static/js/[name].chunk.js',
         publicPath: publicPath,
         devtoolModuleFilenameTemplate: info =>
-            path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
+            path.resolve(info.absoluteResourcePath).replace(/\\/g, '/^'),
     },
     resolve: {
-        modules: ['node_modules', 'dev_tools', paths.appNodeModules].concat(
+        modules: ['node_modules', paths.appNodeModules].concat(
             process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
         ),
+
         extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
-        alias: {'react-native': 'react-native-web',},
+        alias: {
+
+            'react-native': 'react-native-web',
+        },
         plugins: [
+
             new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
         ],
     },
@@ -98,7 +101,7 @@ module.exports = {
                                                 '>1%',
                                                 'last 4 versions',
                                                 'Firefox ESR',
-                                                'not ie < 9', // React doesn't support IE8 anyway
+                                                'not ie < 9',
                                             ],
                                             flexbox: 'no-2009',
                                         }),

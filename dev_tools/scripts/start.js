@@ -1,5 +1,6 @@
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
+process.env.AUTHORIZED = true;
 
 process.on('unhandledRejection', err => {throw err;});
 
