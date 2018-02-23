@@ -72,10 +72,10 @@ const getRows = (todos, removeFunc) => {
 
 const RemoveBtt = ({removeFunc}) => <FlatButton icon={<RemoveIcon/>} onClick={removeFunc}/>;
 
-export default class Todos extends Component {
+class Todos extends Component {
 
     static propTypes = {
-        path: PropTypes.object.isRequired,
+        path: PropTypes.string.isRequired,
         todos: PropTypes.array.isRequired,
         addTodo: PropTypes.func.isRequired,
         removeTodo: PropTypes.func.isRequired,
@@ -102,3 +102,5 @@ export default class Todos extends Component {
     }
 }
 
+export default Todos;
+export {getRows};
