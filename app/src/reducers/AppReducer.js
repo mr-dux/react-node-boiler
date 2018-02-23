@@ -27,7 +27,7 @@ const removeTodo = (state, index, key) => {
     const oldTodos = state[key];
     let newTodos = [];
     oldTodos.forEach((item, i)=>{
-        if (i === 0) return;
+        if (i === index) return;
         newTodos.push(item);
     });
     const newState = {...state};
